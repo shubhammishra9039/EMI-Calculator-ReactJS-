@@ -384,8 +384,34 @@
   
 }
 
-.mid .right .pieGraph .pieAmount-Display h5{
+.mid .right .pieGraph .pieAmount-Display div {
+  font-size: 16px;
+  margin-left: 5px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2px;
+  /* width: 100%; */
+  /* background-color: rebeccapurple; */
+  
+
+}
+.mid .right .pieGraph .pieAmount-Display h5 {
+  font-size: 13px;
+  margin-left: 5px;
+
+}
+.mid .right .pieGraph .pieAmount-Display h5 i {
   font-size: 18px;
+  margin-right:5px ;
+  color: #b02a30;
+
+}
+.mid .right .pieGraph .pieAmount-Display h5 i#Interest {
+  font-size: 18px;
+  margin-right:5px ;
+  color: #EF6800;
 
 }
 .mid .right .pieGraph .pieAmount-Display

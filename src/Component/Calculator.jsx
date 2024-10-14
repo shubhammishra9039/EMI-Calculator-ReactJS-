@@ -10,10 +10,12 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 function CALCULATOR() {
   //States
-  const [Principle, setPrinciple] = useState(50000);
+  const [Principle, setPrinciple] = useState(0);
   const [Rate, setRate] = useState(1);
   const [Time, setTime] = useState(1);
   const [Emi, setEmi] = useState(0);
+  const [Interest, setInterest] = useState(0);
+  const [Total, setTotal] = useState(0);
 
   //Ref
   let PrincipleRangRef = useRef();
@@ -47,16 +49,21 @@ function CALCULATOR() {
     const emiValue =
       (Principle * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
     console.log(Emi);
-    setEmi(emiValue.toFixed(2)); // Round to 2 decimal places
+    setEmi(emiValue.toFixed(2)); 
+
+    let Interest=Math.floor((Principle*Rate*Time)/100)
+    setInterest(Interest)
+    let totalAmount =Number(Principle) + Number(Interest)
+    setTotal(totalAmount)
   };
 
   // Chart
   const data = {
-    labels: ["Principle", "EMI"],
+    labels: ["Principle", "Interest"],
     datasets: [
       {
         label: "My First Dataset",
-        data: [Principle, Emi],
+        data: [Principle, Interest],
         backgroundColor: ["rgb(176, 42, 48)", "rgb(234, 118, 32)"],
         borderColor: [
           "rgba(255, 99, 132, 1)",
@@ -198,12 +205,16 @@ function CALCULATOR() {
             <div className="pieGraph">
               <div className="pieAmount-Display">
                <div>
-               <h5>Principal amount</h5>
+               <h5> <i class="fa-solid fa-square Principal" ></i>Principal amount</h5>
                 <h5>₹ {Principle}</h5>
                </div>
                <div>
-               <h5>Emi amount</h5>
-                <h5>₹ {Emi}</h5>
+               <h5> <i class="fa-solid fa-square " id="Interest"></i> Interest  amount</h5>
+                <h5>₹ {Interest}</h5>
+               </div>
+               <div>
+               <h5> Total amount</h5>
+                <h5>₹ {Total}</h5>
                </div>
               </div>
               <div className="pie">
