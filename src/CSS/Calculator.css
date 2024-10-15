@@ -380,8 +380,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
- 
-  
 }
 
 .mid .right .pieGraph .pieAmount-Display div {
@@ -391,31 +389,25 @@
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  gap: 2px;
+  gap: 3px;
   /* width: 100%; */
   /* background-color: rebeccapurple; */
-  
-
 }
 .mid .right .pieGraph .pieAmount-Display h5 {
   font-size: 13px;
   margin-left: 5px;
-
 }
 .mid .right .pieGraph .pieAmount-Display h5 i {
   font-size: 18px;
-  margin-right:5px ;
+  margin-right: 5px;
   color: #b02a30;
-
 }
 .mid .right .pieGraph .pieAmount-Display h5 i#Interest {
   font-size: 18px;
-  margin-right:5px ;
-  color: #EF6800;
-
+  margin-right: 5px;
+  color: #ef6800;
 }
-.mid .right .pieGraph .pieAmount-Display
-{
+.mid .right .pieGraph .pieAmount-Display {
   width: 40%;
   height: 80%;
   display: flex;
@@ -431,7 +423,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 
 .mid .right .FinalAmount {
